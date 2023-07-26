@@ -1,7 +1,15 @@
 // * VARIABLES
 $bg: #E56262;
+
+$circle__bg: #FFF;
 $width__first__circle: 90px;
 $height__first__circle: 90px;
+
+$width__second__circle: 60px;
+$height__second__circle: 60px;
+
+$width__third__circle: 30px;
+$height__third__circle: 30px;
 
 // use only the available space inside the 400x400 frame
 .frame {
@@ -23,12 +31,6 @@ $height__first__circle: 90px;
   background-color: $bg;
 }
 
-// .center {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%,-50%);
-// }
 
 .loader {
   display: flex;
@@ -40,7 +42,7 @@ $height__first__circle: 90px;
 
 .circle {
   position: absolute;
-  background-color: #FFF;
+  background-color: $circle__bg;
   border-radius: 50%;
 }
 
@@ -52,21 +54,20 @@ $height__first__circle: 90px;
 }
 
 .second__circle {
-  width: 60px;
-  height: 60px;
+  width: $width__second__circle;
+  height: $height__second__circle;
   z-index: 2;
   animation: animation__second__circle 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate both;
 }
 
 .third__circle {
-  width: 30px;
-  height: 30px;
+  width: $width__third__circle;
+  height: $height__third__circle;
   z-index: 3;
   animation: animation__third__circle 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate both;
 }
 
 // ANIMATIONS
-
 @-webkit-keyframes animation__first__circle {
   0%, 70% {
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
